@@ -56,7 +56,7 @@ jobs:
           username: ${{ secrets.VPS_DEV_USER }}
           key: ${{ secrets.VPS_DEV_SSH_KEY }}
           source: 'dist/*'
-          target: '/var/www/bpdp-sarpras-kelapa'
+          target: '/var/www/bpdp-sarpras-kakao'
 
       - name: Delete dist artifact
         uses: geekyeggo/delete-artifact@v5
