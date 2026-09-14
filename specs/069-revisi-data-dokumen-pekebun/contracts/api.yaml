@@ -1,0 +1,207 @@
+openapi: 3.0.3
+info:
+  title: Revisi Data dan Dokumen Pekebun API
+  version: 1.0.0
+  description: Kontrak API untuk pengambilan detail penolakan pekebun dan pengiriman ulang revisi usulan proposal.
+paths:
+  /api/v1/proposals/{id}/revisi-detail:
+    get:
+      summary: Ambil Detail Revisi Proposal
+      description: Mengambil seluruh rincian penolakan proposal yang dikategorikan ke Dokumen Proposal, Gudang, RAB, dan Pekebun/Lahan.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Berhasil mengambil detail revisi
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/ProposalRevisionDetail'
+                  message:
+                    type: string
+                    example: success
+
+  /api/v1/proposals/{id}/revisi:
+    put:
+      summary: Kirim Ulang Usulan Revisi
+      description: Mengirimkan kembali usulan revisi proposal beserta pembaruan data dan dokumen master pekebun dan lahan.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResubmitProposalRevisionRequest'
+      responses:
+        '200':
+          description: Proposal berhasil dikirim ulang
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                  message:
+                    type: string
+                    example: success
+
+components:
+  schemas:
+    ProposalRevisionDetail:
+      type: object
+      properties:
+        proposal_id:
+          type: integer
+        status:
+          type: string
+          example: REV_FROM_KAB
+        categorized_rejections:
+          type: array
+          items:
+            $ref: '#/components/schemas/CategorizedRejectionItem'
+
+    CategorizedRejectionItem:
+      type: object
+      properties:
+        category:
+          type: string
+          enum: [PROPOSAL_DOC, GUDANG, RAB, PEKEBUN]
+        target_id:
+          type: integer
+        target_key:
+          type: string
+        item_label:
+          type: string
+        notes:
+          type: string
+        is_resolved:
+          type: boolean
+        farmer_id:
+          type: integer
+        farmer_name:
+          type: string
+        farmer_nik:
+          type: string
+        lahan_id:
+          type: integer
+        field_name:
+          type: string
+        document_type:
+          type: string
+        current_value:
+          type: string
+
+    ResubmitProposalRevisionRequest:
+      type: object
+      properties:
+        updated_documents:
+          type: array
+          items:
+            type: object
+            properties:
+              dokumen_proposal_id:
+                type: integer
+              file_id:
+                type: integer
+        storage_area:
+          type: object
+          properties:
+            address:
+              type: string
+            coordinate:
+              type: string
+            exterior_photo_file_id:
+              type: integer
+            interior_photo_file_id:
+              type: integer
+        updated_farmers:
+          type: array
+          items:
+            $ref: '#/components/schemas/UpdateFarmerRevisionItem'
+        updated_farmer_documents:
+          type: array
+          items:
+            $ref: '#/components/schemas/UpdateFarmerDocumentRevisionItem'
+        updated_lands:
+          type: array
+          items:
+            $ref: '#/components/schemas/UpdateLandRevisionItem'
+        updated_land_documents:
+          type: array
+          items:
+            $ref: '#/components/schemas/UpdateLandDocumentRevisionItem'
+
+    UpdateFarmerRevisionItem:
+      type: object
+      required:
+        - id
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        nik:
+          type: string
+        nomor_kk:
+          type: string
+        address:
+          type: string
+        phone_number:
+          type: string
+
+    UpdateFarmerDocumentRevisionItem:
+      type: object
+      required:
+        - pekebun_id
+        - document_type
+        - file_id
+      properties:
+        pekebun_id:
+          type: integer
+        document_type:
+          type: string
+        file_id:
+          type: integer
+
+    UpdateLandRevisionItem:
+      type: object
+      required:
+        - id
+      properties:
+        id:
+          type: integer
+        luas_lahan:
+          type: number
+        jenis_legalitas:
+          type: string
+        nomor_legalitas:
+          type: string
+        nomor_surat_beda_nama:
+          type: string
+
+    UpdateLandDocumentRevisionItem:
+      type: object
+      required:
+        - lahan_id
+        - document_type
+        - file_id
+      properties:
+        lahan_id:
+          type: integer
+        document_type:
+          type: string
+        file_id:
+          type: integer

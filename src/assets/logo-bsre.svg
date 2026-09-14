@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="100%" height="100%">
+  <!-- BSrE Shield Emblem -->
+  <g transform="translate(10, 5)">
+    <defs>
+      <linearGradient id="bsreBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0284C7"/>
+        <stop offset="100%" stop-color="#0369A1"/>
+      </linearGradient>
+    </defs>
+    <!-- Shield -->
+    <path d="M25 2 C38 2 48 8 48 20 C48 35 32 46 25 50 C18 46 2 35 2 20 C2 8 12 2 25 2 Z" fill="url(#bsreBlue)"/>
+    <!-- Lock / Security Check Icon inside shield -->
+    <path d="M25 12 C20 12 17 15 17 19 L17 23 L15 23 C14 23 13 24 13 25 L13 37 C13 38 14 39 15 39 L35 39 C36 39 37 38 37 37 L37 25 C37 24 36 23 35 23 L33 23 L33 19 C33 15 30 12 25 12 Z M25 15 C28 15 30 17 30 19 L30 23 L20 23 L20 19 C20 17 22 15 25 15 Z" fill="#FFFFFF"/>
+    <!-- Keyhole center dot -->
+    <circle cx="25" cy="30" r="2" fill="#0369A1"/>
+    <path d="M24 31 L26 31 L27 35 L23 35 Z" fill="#0369A1"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="68" y="27" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="900" fill="#0F172A" letter-spacing="1">BSrE</text>
+  <text x="68" y="42" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#0284C7" letter-spacing="0.5">Balai Sertifikasi Elektronik</text>
+  <text x="68" y="52" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="500" fill="#64748B">Badan Siber dan Sandi Negara</text>
+</svg>

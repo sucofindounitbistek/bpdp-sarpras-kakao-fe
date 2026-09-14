@@ -1,0 +1,13 @@
+- [x] T001 [P] Update data model interface to support `daftarLahan?: LahanPekebun[]` in `src/types/pekebun.ts`
+- [x] T002 [P] Implement `lahanPekebunListSchema` validator in `src/schemas/pekebun.schema.ts`
+- [x] T003 Update `addPekebunMulti` store action in `src/stores/pekebun.ts` to save array of lands
+- [x] T004 Update the list of initial mock farmers in `src/stores/pekebun.ts` to populate `daftarLahan` for backward compatibility
+- [x] T005 [US1] Implement local state `lahanList` and list UI (summary cards showing legal type, acreage, location, and validation errors) in `src/components/master-data/StepDataLahanPekebun.vue`
+- [x] T006 [US1] Implement `+ Tambah Lahan Baru` and action button handlers (edit, save, cancel) in `src/components/master-data/StepDataLahanPekebun.vue`
+- [x] T007 [US1] Implement segmented tabs routing (Legalitas, Alamat & Berkas, Poligon & Peta) in the expanded land form panel in `src/components/master-data/StepDataLahanPekebun.vue`
+- [x] T008 [US2] Update `FormPekebunView.vue` to store `lahanDataList` array instead of single `lahanData`, and bind it to `StepDataLahanPekebun` component
+- [x] T009 [US2] Update `handleSubmit` in `FormPekebunView.vue` to run validation on `lahanPekebunListSchema` and pass array data to store
+- [x] T010 [US3] Implement dynamic Leaflet map initialization, coordinate row table reordering, and map drawing inside tab 3 container in `src/components/master-data/StepDataLahanPekebun.vue`
+- [x] T011 [US4] Implement `removeLahan` logic with confirmation in `src/components/master-data/StepDataLahanPekebun.vue`
+- [/] T012 Run type checking and production build check `npm run build` to verify compatibility
+- [ ] T013 Verify the implementation against verification scenarios in `specs/009-multi-lahan-pekebun/quickstart.md`

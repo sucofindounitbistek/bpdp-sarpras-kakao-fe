@@ -1,0 +1,50 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API Modul Pengusulan Sarpras BPDP",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/v1/pengusulan": {
+      "get": {
+        "summary": "Mendapatkan daftar pengajuan usulan sarpras",
+        "parameters": [
+          { "name": "status", "in": "query", "type": "string" },
+          { "name": "page", "in": "query", "type": "integer" }
+        ],
+        "responses": {
+          "200": { "description": "Success envelope `{ success: true, data: [...] }`" }
+        }
+      },
+      "post": {
+        "summary": "Membuat usulan baru (Draft/Submit)",
+        "responses": {
+          "201": { "description": "Pengajuan berhasil dibuat" }
+        }
+      }
+    },
+    "/api/v1/pengusulan/{id}": {
+      "get": {
+        "summary": "Mendapatkan detail pengajuan usulan sarpras"
+      },
+      "put": {
+        "summary": "Mengubah / revisi draft pengajuan"
+      }
+    },
+    "/api/v1/pengusulan/{id}/verify-admin": {
+      "post": {
+        "summary": "Verifikasi administrasi oleh Dinas Kab/Kota"
+      }
+    },
+    "/api/v1/pengusulan/{id}/rekomtek": {
+      "post": {
+        "summary": "Upload & Penerbitan Surat Rekomtek Kab/Kota"
+      }
+    },
+    "/api/v1/pengusulan/{id}/sk-penetapan": {
+      "post": {
+        "summary": "Penerbitan SK Penetapan oleh Ditjenbun"
+      }
+    }
+  }
+}
