@@ -97,8 +97,8 @@ const isItemActive = (itemTo: string) => {
         >
           <div class="flex items-center gap-1.5 min-w-0">
             <span class="font-extrabold text-[15px] text-slate-900 dark:text-white font-apple-body-strong tracking-tight"> Sarpras </span>
-            <span class="font-black text-[15px] text-[#066C2A] dark:text-emerald-400 font-apple-body-strong tracking-tight"> Kelapa </span>
-            <Palmtree class="w-4 h-4 text-[#066C2A] dark:text-emerald-400 shrink-0" />
+            <span class="font-black text-[15px] text-[#066C2A] dark:text-emerald-400 font-apple-body-strong tracking-tight"> Kakao </span>
+            <CocoaPodIcon class="w-4 h-4 text-[#066C2A] dark:text-emerald-400 shrink-0" />
           </div>
           <ChevronDown class="w-3.5 h-3.5 text-slate-400 shrink-0 ml-1.5" />
         </button>
