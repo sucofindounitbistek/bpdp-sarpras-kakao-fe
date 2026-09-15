@@ -2693,20 +2693,21 @@ export const LOCALIZATION = {
   sidebar: {
     brand: {
       title: 'BPDP',
-      subtitle: 'Sarpras Kelapa',
+      subtitle: 'Sarpras Kakao',
     },
     categories: {
+      kakao: 'Kakao',
       kelapa: 'Kelapa',
       sawit: 'Sawit',
     },
     apps: {
       sarpras: {
-        name: 'Sarpras Kelapa',
+        name: 'Sarpras Kakao',
         desc: 'Pengusulan, verifikasi lapangan, rekomendasi teknis & penyaluran.',
       },
       replanting: {
-        name: 'Replanting Kelapa',
-        desc: 'Replanting kelapa genjah/dalam untuk mendongkrak produksi daerah.',
+        name: 'Replanting Kakao',
+        desc: 'Penyediaan bibit unggul & peremajaan lahan tanaman kakao.',
       },
       sawitSarpras: {
         name: 'Sarpras Kelapa Sawit',
