@@ -91,7 +91,7 @@ export function exportProposalsToCsv(data: any[], filename = 'daftar-proposal') 
  */
 export function exportProposalsToPdf(
   data: any[],
-  title = 'Daftar Proposal Sarpras Kelapa',
+  title = 'Daftar Proposal Sarpras Kakao',
   filters?: ProposalExportFilterSummary,
 ) {
   if (!data || data.length === 0) return;
