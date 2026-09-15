@@ -2696,6 +2696,7 @@ export const LOCALIZATION = {
       subtitle: 'Sarpras Kakao',
     },
     categories: {
+      kakao: 'Kakao',
       kelapa: 'Kelapa',
       sawit: 'Sawit',
     },
@@ -2705,8 +2706,8 @@ export const LOCALIZATION = {
         desc: 'Pengusulan, verifikasi lapangan, rekomendasi teknis & penyaluran.',
       },
       replanting: {
-        name: 'Replanting Kelapa',
-        desc: 'Replanting kelapa genjah/dalam untuk mendongkrak produksi daerah.',
+        name: 'Replanting Kakao',
+        desc: 'Penyediaan bibit unggul & peremajaan lahan tanaman kakao.',
       },
       sawitSarpras: {
         name: 'Sarpras Kakao Sawit',

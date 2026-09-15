@@ -5,7 +5,8 @@ import { useNavigation } from '@/composables/useNavigation';
 import { useAuthStore } from '@/stores/auth';
 import { LOCALIZATION } from '@/config/localization';
 import logoBpdp from '@/assets/img/logobpdp.png';
-import { X, ChevronRight, ChevronDown, Layers, Lock, TreeDeciduous, LogOut } from 'lucide-vue-next';
+import { X, ChevronRight, ChevronDown, Layers, Lock, LogOut } from 'lucide-vue-next';
+import CocoaPodIcon from '@/components/ui/CocoaPodIcon.vue';
 import LogoutConfirmationModal from '@/components/ui/LogoutConfirmationModal.vue';
 
 defineProps<{
@@ -20,7 +21,7 @@ const emit = defineEmits<{
 const route = useRoute();
 const authStore = useAuthStore();
 const isWorkspaceOpen = ref(false);
-const activeCategory = ref<'kakao' | 'kelapa' | 'sawit'>('kelapa');
+const activeCategory = ref<'kakao' | 'kelapa' | 'sawit'>('kakao');
 const isLogoutModalOpen = ref(false);
 
 const handleLogoutConfirm = () => {
@@ -96,8 +97,8 @@ const isItemActive = (itemTo: string) => {
         >
           <div class="flex items-center gap-1.5 min-w-0">
             <span class="font-extrabold text-[15px] text-slate-900 dark:text-white font-apple-body-strong tracking-tight"> Sarpras </span>
-            <span class="font-black text-[15px] text-amber-800 dark:text-emerald-400 font-apple-body-strong tracking-tight"> Kakao </span>
-            <TreeDeciduous class="w-4 h-4 text-amber-800 dark:text-emerald-400 shrink-0" />
+            <span class="font-black text-[15px] text-[#066C2A] dark:text-emerald-400 font-apple-body-strong tracking-tight"> Kelapa </span>
+            <Palmtree class="w-4 h-4 text-[#066C2A] dark:text-emerald-400 shrink-0" />
           </div>
           <ChevronDown class="w-3.5 h-3.5 text-slate-400 shrink-0 ml-1.5" />
         </button>
@@ -115,19 +116,14 @@ const isItemActive = (itemTo: string) => {
               @click="activeCategory = 'kakao'"
               :class="[
                 'w-full text-left px-2.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center justify-between',
-                activeCategory === 'kakao' ? 'bg-emerald-50/70 dark:bg-emerald-950/20 text-[#066C2A] dark:text-emerald-400' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/60',
+                activeCategory === 'kakao' ? 'bg-amber-100/70 dark:bg-amber-950/40 text-amber-900 dark:text-amber-300 font-bold' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/60',
               ]"
             >
               <span class="flex items-center gap-1.5 min-w-0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-amber-600 dark:text-amber-500 shrink-0">
-                  <path d="M4.5 16.5c2-6 7.5-11.5 13-11.5s5 3 2 9-9.5 9-13 7.5z" />
-                  <path d="M7.5 14.5c1.5-4 5-8.5 9-9.5" />
-                  <path d="M10.5 17.5c2-3.5 5.5-6.5 8-6.5" />
-                  <path d="M18.5 5l2.5-2.5" />
-                </svg>
+                <CocoaPodIcon class="w-3.5 h-3.5 text-amber-600 dark:text-amber-500 shrink-0" />
                 <span>Kakao</span>
               </span>
-              <ChevronRight v-if="activeCategory === 'kakao'" class="w-3 h-3 text-[#066C2A] dark:text-emerald-400" />
+              <ChevronRight v-if="activeCategory === 'kakao'" class="w-3 h-3 text-amber-800 dark:text-amber-400" />
             </button>
             <button
               type="button"
@@ -187,23 +183,22 @@ const isItemActive = (itemTo: string) => {
 
             <!-- Kakao Applications -->
             <template v-if="activeCategory === 'kakao'">
-              <a
-                href="https://bpdp-sarpras-kakao.scitechnology.id/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="w-full text-left p-2.5 rounded-xl border border-amber-200/50 bg-amber-50/30 dark:bg-amber-950/10 text-slate-800 dark:text-slate-100 flex items-start gap-2.5 transition-all hover:bg-amber-50/50 cursor-pointer"
+              <button
+                type="button"
+                @click="isWorkspaceOpen = false"
+                class="w-full text-left p-2.5 rounded-xl border border-amber-200/80 bg-amber-50/60 dark:bg-amber-950/20 text-slate-800 dark:text-slate-100 flex items-start gap-2.5 transition-all hover:bg-amber-50/90 cursor-pointer"
               >
-                <div class="w-8 h-8 rounded-lg bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0">
+                <div class="w-8 h-8 rounded-lg bg-amber-100 dark:bg-amber-900/60 text-amber-800 dark:text-amber-300 flex items-center justify-center shrink-0">
                   <Layers class="w-4 h-4" />
                 </div>
                 <div class="flex flex-col min-w-0">
                   <span class="text-xs font-bold flex items-center gap-1.5">
                     Sarpras Kakao
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-500" />
                   </span>
                   <span class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug"> Sistem bantuan sarana prasarana, verifikasi rekomtek, dan monitoring. </span>
                 </div>
-              </a>
+              </button>
 
               <button
                 type="button"
@@ -222,9 +217,10 @@ const isItemActive = (itemTo: string) => {
 
             <!-- Kelapa Applications -->
             <template v-if="activeCategory === 'kelapa'">
-              <button
-                type="button"
-                @click="isWorkspaceOpen = false"
+              <a
+                href="https://bpdp-sarpras-kelapa.scitechnology.id/"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="w-full text-left p-2.5 rounded-xl border border-emerald-200/50 bg-emerald-50/30 dark:bg-emerald-950/10 text-slate-800 dark:text-slate-100 flex items-start gap-2.5 transition-all hover:bg-emerald-50/50 cursor-pointer"
               >
                 <div class="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-950 text-[#066C2A] dark:text-emerald-400 flex items-center justify-center shrink-0">
@@ -237,7 +233,7 @@ const isItemActive = (itemTo: string) => {
                   </span>
                   <span class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug"> Bantuan sarana prasarana, verifikasi dinas, dan penyaluran dana. </span>
                 </div>
-              </button>
+              </a>
 
               <button
                 type="button"
@@ -300,7 +296,7 @@ const isItemActive = (itemTo: string) => {
             'flex items-center rounded-xl text-xs font-semibold transition-all duration-200 group',
             isCollapsed ? 'justify-center p-2.5' : 'justify-between px-3 py-2.5',
             isItemActive(item.to)
-              ? 'bg-emerald-50/70 dark:bg-emerald-950/30 text-[#066C2A] dark:text-emerald-400 shadow-xs border border-emerald-200/50 dark:border-emerald-900/40 font-bold'
+              ? 'bg-amber-500/10 dark:bg-amber-950/40 text-[#78350F] dark:text-amber-300 shadow-xs border border-amber-300/60 dark:border-amber-800/40 font-bold'
               : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/60',
           ]"
         >
@@ -309,13 +305,13 @@ const isItemActive = (itemTo: string) => {
               :is="item.icon"
               :class="[
                 'w-4 h-4 transition-colors shrink-0',
-                isItemActive(item.to) ? 'text-[#066C2A] dark:text-emerald-400' : 'text-slate-400 dark:text-slate-500 group-hover:text-slate-600 dark:group-hover:text-slate-300',
+                isItemActive(item.to) ? 'text-[#78350F] dark:text-amber-400' : 'text-slate-400 dark:text-slate-500 group-hover:text-slate-600 dark:group-hover:text-slate-300',
               ]"
             />
             <span v-if="!isCollapsed" class="truncate">{{ item.label }}</span>
           </div>
 
-          <ChevronRight v-if="!isCollapsed && isItemActive(item.to)" class="w-3.5 h-3.5 text-[#066C2A] dark:text-emerald-400 shrink-0" />
+          <ChevronRight v-if="!isCollapsed && isItemActive(item.to)" class="w-3.5 h-3.5 text-[#78350F] dark:text-amber-400 shrink-0" />
         </RouterLink>
       </div>
     </div>
