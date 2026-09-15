@@ -1018,7 +1018,7 @@ export const useRekomtekStore = defineStore('rekomtek', () => {
         uploadedAt: item.skDirut?.uploadedAt || new Date().toISOString(),
       };
       item.updatedAt = new Date().toISOString();
-      addLog(item, oldStatus, 'SELESAI', actorName, 'BPDP_VERIFIKATOR', `SK Dirut berhasil diterbitkan dengan nomor: ${nomorSk}. Usulan Sarpras Kelapa selesai.`);
+      addLog(item, oldStatus, 'SELESAI', actorName, 'BPDP_VERIFIKATOR', `SK Dirut berhasil diterbitkan dengan nomor: ${nomorSk}. Usulan Sarpras Kakao selesai.`);
       if (activeUsulan.value && activeUsulan.value.id === id) {
         activeUsulan.value.status = 'SELESAI';
         activeUsulan.value.skDirut = { ...item.skDirut };

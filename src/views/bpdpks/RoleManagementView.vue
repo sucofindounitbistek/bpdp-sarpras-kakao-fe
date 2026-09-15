@@ -304,7 +304,7 @@ function getRoleAllowedCount(roleId: number): number {
                 </span>
               </div>
               <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                Konfigurasi granular visibilitas navigasi untuk 13 peran ekosistem Sarpras Kelapa BPDP.
+                Konfigurasi granular visibilitas navigasi untuk 13 peran ekosistem Sarpras Kakao BPDP.
               </p>
             </div>
           </div>

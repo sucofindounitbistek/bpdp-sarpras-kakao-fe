@@ -175,14 +175,14 @@ export function generateSuratPermohonanHtml(data: SuratPermohonanPdfData): strin
 
     <div class="content-text">
       Kepada Yth.<br>
-      <strong>Direktur Penyaluran Dana / Tim Teknis Sarpras Kelapa</strong><br>
+      <strong>Direktur Penyaluran Dana / Tim Teknis Sarpras Kakao</strong><br>
       Badan Pengelola Dana Perkebunan (BPDP)<br>
       di Tempat
     </div>
 
     <div class="content-text">
       Dengan hormat,<br>
-      Sehubungan dengan program bantuan Sarana dan Prasarana Perkebunan Kelapa tahun 2026, bersama ini kami atas nama <strong>${data.namaLembaga}</strong> mengajukan permohonan pengadaan dan penyaluran barang paket <strong>${data.kategoriPaket}</strong> dengan rincian preferensi kebutuhan barang sebagai berikut:
+      Sehubungan dengan program bantuan Sarana dan Prasarana Perkebunan Kakao tahun 2026, bersama ini kami atas nama <strong>${data.namaLembaga}</strong> mengajukan permohonan pengadaan dan penyaluran barang paket <strong>${data.kategoriPaket}</strong> dengan rincian preferensi kebutuhan barang sebagai berikut:
     </div>
 
     <table class="rab-table">
