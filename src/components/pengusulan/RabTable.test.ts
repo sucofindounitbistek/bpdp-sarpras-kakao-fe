@@ -89,4 +89,31 @@ describe('RabTable Satuan by Jenis Selection', () => {
     const options = satuanSelect.findAll('option').map((o) => o.text()).filter((t) => t !== 'Pilih Satuan');
     expect(options).toEqual(['Kg', 'Liter', 'Buah', 'Sachet', 'Unit']);
   });
+
+  it('displays the 4 approved Kakao Pupuk options (Urea, SP 36, KCl, Kieserit) in Uraian dropdown', async () => {
+    const items = [createItem({ jenis: 'Pupuk' })];
+    const wrapper = mount(RabTable, {
+      props: {
+        items,
+        readonly: false,
+      },
+    });
+
+    const selects = wrapper.findAll('select');
+    const uraianSelect = selects[1]; // 0: Jenis, 1: Uraian, 2: Varietas, 3: Satuan
+    const options = uraianSelect.findAll('option').map((o) => o.text()).filter((t) => t !== 'Pilih Uraian');
+    expect(options).toEqual(['Urea', 'SP 36', 'KCl', 'Kieserit']);
+  });
+
+  it('renders historical pupuk items correctly in readonly mode', async () => {
+    const items = [createItem({ jenis: 'Pupuk', uraian: 'Rock Phospate' })];
+    const wrapper = mount(RabTable, {
+      props: {
+        items,
+        readonly: true,
+      },
+    });
+
+    expect(wrapper.text()).toContain('Rock Phospate');
+  });
 });

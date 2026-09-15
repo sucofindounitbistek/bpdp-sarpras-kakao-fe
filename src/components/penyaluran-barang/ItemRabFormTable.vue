@@ -47,7 +47,7 @@ const VARIETAS_OPTIONS: Record<string, string[]> = {
   'Bibit Kelapa Siap Tanam': ['Kelapa Genjah Kuning', 'Kelapa Genjah Kopyor', 'Kelapa Dalam Sri Gemilang', 'Kelapa Hibrida KHINA-1'],
   'Kecambah Kelapa': ['Kelapa Genjah Kuning', 'Kelapa Genjah Kopyor', 'Kelapa Dalam'],
   'Pupuk Majemuk NPK': ['NPK 15-15-15', 'NPK 12-12-17-2', 'NPK Phonska Plus'],
-  'Pupuk Anorganik Tunggal': ['Urea', 'Rock Phosphate', 'KCL', 'Kieserite', 'Boron'],
+  'Pupuk Anorganik Tunggal': ['Urea', 'SP 36', 'KCl', 'Kieserit'],
   'Pupuk Organik / Kompos': ['Kompos Terfermentasi', 'Pupuk Kandang Matang', 'Granul Organik'],
   'Herbisida': ['Glifosat 480 SL', 'Parakuat Diklorida', 'Isopropilamina Glifosat'],
   'Insektisida': ['Karbofuran 3GR', 'Deltametrin', 'Klorantraniliprol'],
