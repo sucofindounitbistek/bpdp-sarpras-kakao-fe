@@ -200,7 +200,7 @@ export const LOCALIZATION = {
     ],
     barangOptions: {
       Benih: ['Benih'],
-      Pupuk: ['Rock Phospate', 'Urea', 'Kieserite', 'KCL', 'Boron'],
+      Pupuk: ['Urea', 'SP 36', 'KCl', 'Kieserit'],
       Pestisida: ['Agents Hayati', 'Insektisida/Fungisida', 'Rodentisida', 'Termitisida', 'Herbisida'],
     } as Record<string, string[]>,
     varietasOptions: ['Kelapa Dalam', 'Kelapa Genjah', 'Kelapa Hibrida', 'Kelapa Varietas Lainnya'],

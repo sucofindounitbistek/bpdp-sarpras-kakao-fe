@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   class?: string;
 }>();
 </script>
@@ -13,7 +13,7 @@ defineProps<{
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    :class="class"
+    :class="props.class"
     aria-hidden="true"
   >
     <!-- Siluet buah kakao lonjong berujung lancip dengan tekstur alur memanjang dan tangkai -->
