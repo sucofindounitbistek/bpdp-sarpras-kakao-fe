@@ -1,7 +1,11 @@
-<script setup lang="ts">
-const props = defineProps<{
-  class?: string;
-}>();
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export const CocoaPodIcon = defineComponent({
+  name: 'CocoaPodIcon',
+});
+
+export default CocoaPodIcon;
 </script>
 
 <template>
@@ -13,7 +17,6 @@ const props = defineProps<{
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    :class="props.class"
     aria-hidden="true"
   >
     <!-- Siluet buah kakao lonjong berujung lancip dengan tekstur alur memanjang dan tangkai -->
