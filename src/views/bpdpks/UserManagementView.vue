@@ -154,7 +154,7 @@ const getBadgeVariant = (roleCode?: string) => {
           User Management & Hak Akses
         </h1>
         <p class="text-xs text-slate-500 dark:text-slate-400 font-sans">
-          Pengelolaan pengguna terdaftar, peran operasional, dan status akses sistem Sarpras Kelapa.
+          Pengelolaan pengguna terdaftar, peran operasional, dan status akses sistem Sarpras Kakao.
         </p>
       </div>
 

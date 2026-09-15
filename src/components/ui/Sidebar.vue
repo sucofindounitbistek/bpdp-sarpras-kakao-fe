@@ -97,8 +97,8 @@ const isItemActive = (itemTo: string) => {
         >
           <div class="flex items-center gap-1.5 min-w-0">
             <span class="font-extrabold text-[15px] text-slate-900 dark:text-white font-apple-body-strong tracking-tight"> Sarpras </span>
-            <span class="font-black text-[15px] text-[#78350F] dark:text-amber-400 font-apple-body-strong tracking-tight"> Kakao </span>
-            <CocoaPodIcon class="w-4 h-4 text-[#78350F] dark:text-amber-400 shrink-0" />
+            <span class="font-black text-[15px] text-[#066C2A] dark:text-emerald-400 font-apple-body-strong tracking-tight"> Kelapa </span>
+            <Palmtree class="w-4 h-4 text-[#066C2A] dark:text-emerald-400 shrink-0" />
           </div>
           <ChevronDown class="w-3.5 h-3.5 text-slate-400 shrink-0 ml-1.5" />
         </button>
@@ -228,7 +228,7 @@ const isItemActive = (itemTo: string) => {
                 </div>
                 <div class="flex flex-col min-w-0">
                   <span class="text-xs font-bold flex items-center gap-1.5">
-                    Sarpras Kelapa
+                    Sarpras Kakao
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                   </span>
                   <span class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5 leading-snug"> Bantuan sarana prasarana, verifikasi dinas, dan penyaluran dana. </span>

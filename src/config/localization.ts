@@ -2602,7 +2602,7 @@ export const LOCALIZATION = {
   // ============================================
   login: {
     page: {
-      title: 'BPDP Sarpras Kelapa',
+      title: 'BPDP Sarpras Kakao',
       subtitle: 'Masuk ke sistem manajemen sarana dan prasarana',
     },
     form: {
@@ -2656,7 +2656,7 @@ export const LOCALIZATION = {
       buttonLabel: 'Keluar',
       buttonAccountLabel: 'Keluar Akun',
       modalTitle: 'Konfirmasi Keluar',
-      modalDescription: 'Apakah Anda yakin ingin keluar dari aplikasi Sarpras Kelapa? Anda harus masuk kembali melalui portal BPDP IAM untuk mengakses aplikasi.',
+      modalDescription: 'Apakah Anda yakin ingin keluar dari aplikasi Sarpras Kakao? Anda harus masuk kembali melalui portal BPDP IAM untuk mengakses aplikasi.',
       cancelButton: 'Batal',
       confirmButton: 'Ya, Keluar',
       toastSuccess: 'Anda telah berhasil keluar.',
@@ -2680,7 +2680,7 @@ export const LOCALIZATION = {
       BPDP_APPROVAL: { name: 'BPDP Approval (Admin)', desc: 'Otorisasi SK Dirut & hak akses' },
       BPDP_PPK: { name: 'BPDP PPK', desc: 'Pejabat Pembuat Komitmen & disposisi pengadaan' },
       BPDP_ULP: { name: 'BPDP ULP', desc: 'Unit Layanan Pengadaan & tender e-catalog' },
-      BPDP_STAFF: { name: 'BPDP Staff', desc: 'Pemeriksaan dokumen pencairan dana (Sarpras Kelapa)' },
+      BPDP_STAFF: { name: 'BPDP Staff', desc: 'Pemeriksaan dokumen pencairan dana (Sarpras Kakao)' },
       BPDP_KADIV: { name: 'BPDP Kadiv', desc: 'Persetujuan akhir pencairan dana & Surat Persetujuan' },
       SURVEYOR_SCI: { name: 'Surveyor SCI', desc: 'Verifikasi dokumen pencairan & monitoring lapangan' },
       BANK_MITRA: { name: 'Bank Mitra', desc: 'Komparisi A.3, konfirmasi transfer, penutupan escrow' },
@@ -2710,7 +2710,7 @@ export const LOCALIZATION = {
         desc: 'Penyediaan bibit unggul & peremajaan lahan tanaman kakao.',
       },
       sawitSarpras: {
-        name: 'Sarpras Kelapa Sawit',
+        name: 'Sarpras Kakao Sawit',
         desc: 'Bantuan sarana prasarana, verifikasi dinas, dan monitoring.',
       },
     },
@@ -3520,7 +3520,7 @@ export const LOCALIZATION = {
   },
   logout: {
     modalTitle: 'Konfirmasi Keluar Akun',
-    modalDescription: 'Apakah Anda yakin ingin keluar dari sesi aplikasi Sarpras Kelapa?',
+    modalDescription: 'Apakah Anda yakin ingin keluar dari sesi aplikasi Sarpras Kakao?',
     confirmButton: 'Ya, Keluar',
     cancelButton: 'Batal',
     buttonLabel: 'Keluar',
